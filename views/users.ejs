@@ -1,0 +1,32 @@
+<h1 class="title">User Panel</h1>
+
+<section class="section">
+  <h2 class="subtitle">Barcode Scanners</h2>
+  <ul class="menu-list">
+    <% servers.forEach(server => { %>
+      <li><%= server.name %> - <%= server.ip %>:<%= server.port %></li>
+    <% }); %>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 class="subtitle">Data</h2>
+  <table class="table is-fullwidth">
+    <thead>
+      <!-- Add table headers -->
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Loop through data and populate table rows -->
+      <% data.forEach(item => { %>
+        <tr>
+          <td><%= item.server %></td>
+          <td><%= item.data %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</section>
